@@ -101,7 +101,7 @@ async function seedDatabase() {
   ]);
 
   console.log('[Seed] Seeding SLA Rules...');
-  const slaEntries = [];
+  const slaEntries: any[] = [];
   for (const cat of COMPLAINT_CATEGORIES) {
     slaEntries.push(
       { category: cat, priority: PriorityLevel.CRITICAL, maxResolutionHours: 12, level1EscalationHours: 6, level2EscalationHours: 12, level3EscalationHours: 24 },
