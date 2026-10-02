@@ -105,7 +105,7 @@ export class AuthController {
       if (req.user?.panchayatId) {
         query.panchayatId = req.user.panchayatId;
       }
-      let workers = await User.find(query).select('name phone assignedTasksCount villageId panchayatId');
+      let workers: any = await User.find(query).select('name phone assignedTasksCount villageId panchayatId');
       if (workers.length === 0) {
         // Fallback: return any available field workers in the system so assignments are never blocked
         workers = await User.find({ role: UserRole.FIELD_WORKER }).select('name phone assignedTasksCount villageId panchayatId');
