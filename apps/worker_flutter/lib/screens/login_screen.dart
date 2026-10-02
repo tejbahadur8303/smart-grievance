@@ -55,14 +55,23 @@ class _WorkerLoginScreenState extends State<WorkerLoginScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
             child: Column(
               children: [
-                Container(
-                  width: 76,
-                  height: 76,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF1E3A8A),
-                    borderRadius: BorderRadius.circular(22),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(22),
+                  child: Image.asset(
+                    'assets/images/app_logo.png',
+                    width: 84,
+                    height: 84,
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => Container(
+                      width: 76,
+                      height: 76,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1E3A8A),
+                        borderRadius: BorderRadius.circular(22),
+                      ),
+                      child: const Icon(Icons.engineering, color: Colors.white, size: 40),
+                    ),
                   ),
-                  child: const Icon(Icons.engineering, color: Colors.white, size: 40),
                 ),
                 const SizedBox(height: 16),
                 const Text(
