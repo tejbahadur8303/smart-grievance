@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": "📦 Root & Configs",
+      "path": "."
+    },
+    {
+      "name": "⚙️ Backend API (Node + Express + TS)",
+      "path": "backend"
+    },
+    {
+      "name": "🏛️ District Admin Web (React + Vite)",
+      "path": "apps/admin_web"
+    },
+    {
+      "name": "📜 Panchayat Officer Web (React + Vite)",
+      "path": "apps/panchayat_web"
+    },
+    {
+      "name": "📱 Citizen App (Flutter)",
+      "path": "apps/citizen_flutter"
+    },
+    {
+      "name": "👷 Worker App (Flutter)",
+      "path": "apps/worker_flutter"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
+}
